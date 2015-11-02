@@ -25,6 +25,13 @@ class Link
      */
     private $url;
 
+    /**
+     * Link user
+     *
+     * @var \WebLinks\Domain\User
+     */
+    private $user;
+
     public function getId() {
         return $this->id;
     }
@@ -47,5 +54,21 @@ class Link
 
     public function setUrl($url) {
         $this->url = $url;
+    }
+
+    /**
+     * @return User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * @param \WebLinks\Domain\User $user
+     */
+    public function setUser(User $user)
+    {
+        $this->user = $user;
     }
 }
